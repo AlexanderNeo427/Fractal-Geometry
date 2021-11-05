@@ -1,31 +1,24 @@
 #ifndef SIERPINSKI_TRIANGLE
 #define SIERPINSKI_TRIANGLE
 
-#include "../ISimulation.h"
-
+#include "../FractalBase.h"
 #include "glm/common.hpp"
 #include "glm/glm.hpp"
 #include "glm/vec2.hpp"
 
-class SierpinskiTriangle : public ISimulation
+class SierpinskiTriangle : public FractalBase
 {
 public:
-	const int MAX_LVL = 6;
+	static const int MAX_LVL = 6; // Recursion depth
 public:
-	SierpinskiTriangle();
+	SierpinskiTriangle(olc::PixelGameEngine* pge);
 
-	void Init()							   override;
-	void Update(float deltaTime)		   override;
-	void Render(olc::PixelGameEngine* pge) override;
-	void Exit()							   override;
+	void Visualize() override;
 private:
-	void DrawSierpinski(olc::PixelGameEngine* pge, 
-						int					  lvl,
-						const glm::vec2&	  p1,
-						const glm::vec2&	  p2,
-						const glm::vec2&	  p3);
-private:
-	bool m_firstRun;
+	void DrawSierpinski(const int		 lvl,
+						const glm::vec2& p1,
+						const glm::vec2& p2,
+						const glm::vec2& p3);
 };
 
 #endif

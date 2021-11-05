@@ -1,19 +1,27 @@
-#ifndef APPLICATION_H
-#define APPLICATION_H
+#ifndef APPLICATION
+#define APPLICATION
 
-// All scenes here
+#include "olcPixelGameEngine.h"
 #include "Fractal Algorithms/SierpinskiTriangle.h"
 
 class Application : public olc::PixelGameEngine
 {
 public:
-	Application();
+	Application()
+	{
+		sAppName = "olcPixelGameEngine - Fractal Algorithms Visualized";
+	}
 
-	bool OnUserCreate()				   override;
-	bool OnUserUpdate(float deltaTime) override;
-	bool OnUserDestroy()			   override;
+	bool OnUserCreate()
+	{
+		m_fractalBase = new SierpinskiTriangle(this);
+		m_fractalBase->Visualize();
+
+		return true;
+	}
+	bool OnUserUpdate(float deltaTime) { return true; }
 private:
-	ISimulation* m_simulation;
+	FractalBase* m_fractalBase;
 };
 
 #endif
