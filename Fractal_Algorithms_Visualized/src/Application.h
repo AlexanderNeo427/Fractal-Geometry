@@ -2,7 +2,9 @@
 #define APPLICATION
 
 #include "olcPixelGameEngine.h"
-#include "Fractal Algorithms/SierpinskiTriangle.h"
+
+#include "Fractals/SierpinskiTriangle.h"
+#include "Fractals/MandelbrotSet.h"
 
 class Application : public olc::PixelGameEngine
 {
@@ -12,9 +14,14 @@ public:
 		sAppName = "olcPixelGameEngine - Fractal Algorithms Visualized";
 	}
 
+	~Application()
+	{
+		delete m_fractalBase;
+	}
+
 	bool OnUserCreate()
 	{
-		m_fractalBase = new SierpinskiTriangle(this);
+		m_fractalBase = new MandelbrotSet(this);
 		m_fractalBase->Visualize();
 
 		return true;

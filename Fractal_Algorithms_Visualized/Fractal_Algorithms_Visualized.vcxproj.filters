@@ -18,18 +18,18 @@
     <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Fractal Algorithms\SierpinskiTriangle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Fractal Algorithms\SierpinskiTriangle.h">
+    <ClInclude Include="src\Fractals\SierpinskiTriangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\FractalBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fractals\MandelbrotSet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

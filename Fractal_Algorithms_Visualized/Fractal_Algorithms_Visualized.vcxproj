@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Fractal Algorithms\SierpinskiTriangle.cpp" />
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\Fractals\MandelbrotSet.h" />
     <ClInclude Include="src\FractalBase.h" />
-    <ClInclude Include="src\Fractal Algorithms\SierpinskiTriangle.h" />
+    <ClInclude Include="src\Fractals\SierpinskiTriangle.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
